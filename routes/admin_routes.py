@@ -37,6 +37,7 @@ def delete_orange():
 
     if verify_password(data["pwd"], service.admin_password_hash):
         service.orange.clear_chain()
+        logger.warning("Orange Blockchain deleted.")
         return jsonify({"message": "Successfully deleted Orange Blockchain"}), 200
 
     logger.warning("Unauthorized blockchain delete attempt")
