@@ -10,7 +10,7 @@ class Block:
         self.data = data
         self.prev_hash = prev_hash
         self.nonce = nonce
-        self.hash = self.generate_hash()
+        self.hash = None
 
     def generate_hash(self):
 
